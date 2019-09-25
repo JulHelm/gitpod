@@ -1,7 +1,10 @@
-
 #!usr/bin/python3
 
 # to print a string
+from ipython_genutils.testing.decorators import skip_if_no_x11
+from rx.linq.enumerable import whiledo
+from rx.linq.observable import ifthen
+
 print("Strings and things:")
 print('Hello world')
 print("""Hello, this is
@@ -97,3 +100,91 @@ bool3 = False
 bool4 = 3*3 != 9
 print(bool1, bool2, bool3, bool4)
 print(type(bool1))
+
+bool5 = 'True'
+print(type(bool5))
+nl()
+
+#relational and boolean Operators
+print("#relational and boolean Operators")
+greater_than = 7 > 5
+less_than = 5 < 7
+greater_than_equal_to = 7 >= 7
+less_than_equal_to = 7 <= 7
+print(greater_than, less_than, greater_than_equal_to, less_than_equal_to)
+
+test_and = ( 7 > 5 ) and ( 8 < 7)
+test_or =  (7 > 5 ) or ( 5 < 7)
+test_not = not True
+print(test_and, test_or, test_not)
+
+#conditional statements
+print("conditional statements")
+
+def soda(money):
+    if money >= 5:
+        print("soda gekauft")
+    else:
+        print("soda nicht gekauft")
+
+soda(2)
+soda(9)
+
+def alcohol(age, money):
+    if (age >=21) and (money >= 5):
+        return "We are gettin tipsy!"
+    elif (age >=21) and (money < 5):
+        return "Come back with more money"
+    elif (age < 21) and (money >= 5):
+        return "too young"
+    else:
+        return "go home"
+
+print(alcohol(22, 9))
+print(alcohol(6, 9))
+
+nl()
+# lists
+print("lists have brackets")
+
+movies = ["hangover", "perps", "googles"]
+print(movies)
+print(movies[1])
+print(movies[0:2])      #man muss die letzte ziffer um 1 erhöhen falls man die wirklich haben will
+print(movies[1:])
+print(movies[:1])
+print(movies[-1])
+print(len(movies))
+
+movies.append("jaws")
+print(movies)
+movies.pop()        #removes last
+print(movies)
+movies.pop(1)
+print(movies)
+
+movies = ["hangover", "perps", "googles"]
+person = ["julian", "jake", "leah"]
+
+combine = zip(movies, person)
+print(list(combine))
+nl()
+
+#tupels
+print("tupels have parantheses and cannot be changed:")         #means immutable
+grades = ("A", "B", "C", "D", "E", "F")
+print(grades[0])
+nl()
+
+#looping
+print("loops:")
+liste = [1, 4, 7, 8]
+for zahl in liste:
+    print(zahl)
+
+i = 1
+while i <= 10 :
+    print(i)
+    i += 1
+
+
