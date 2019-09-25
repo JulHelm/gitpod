@@ -1,6 +1,6 @@
 
 #!usr/bin/python3
-asd
+
 # to print a string
 print("Strings and things:")
 print('Hello world')
