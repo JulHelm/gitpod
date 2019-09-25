@@ -57,3 +57,33 @@ def book(title, author):
     print(fav)
 
 book("Hero", "Paula")
+
+#Dictionaries
+print("Dicstionaries are keys and values")
+drinks = {"Whiskey":7, "Beer":5, "Water":2, "Lemon":4}            #drink is key, price is values
+print(drinks)
+
+employees = {"Finance":["Bob", "Linda"], "IT":["Jerry", "Ballo"], "HR":["Marc", "Paul"]}
+print(employees)
+
+employees["Legal"] = ["Mr. Fond"]                              #add new key value pair
+print(employees)
+
+employees.update({"Sales": ["Andi", "Olli"]})
+print(employees)
+
+drinks["Whiskey"] = 6
+print(drinks)
+
+print(drinks.get("Beer"))
+print(drinks.get("peer"))
+print(drinks["Beer"])
+
+#List and dictionaries:
+movies = ["ASS" , "Blue", "aero", "resso"]
+persons = ["1", "2", "3", "4"]
+
+combined = zip(movies, persons)
+movie_dictionary = {key: value for key, value in combined}
+
+print(movie_dictionary)
